@@ -1,0 +1,26 @@
+name: Remove obsolete recovery branches
+on:
+  push:
+    paths:
+      - .github/workflows/cleanup-branches.yml
+permissions:
+  contents: write
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Delete obsolete branches
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          for branch in \
+            'reconstruct/1.4.1-baseline' \
+            'reconstruction/1.4.1-baseline' \
+            'recovery/1.4.1-source-reconstruction' \
+            'source-recovery-jei-19.53'; do
+            gh api --method DELETE "repos/${GH_REPO}/git/refs/heads/${branch}"
+            echo "Deleted ${branch}"
+          done
