@@ -1,15 +1,17 @@
-# Forever Recipe Editor 1.4.2
+# Forever Recipe Editor 1.4.3-skyblock.1
 
 Visual in-game editor for shaped and shapeless crafting recipes on Minecraft 1.21.1.
 
 Version 1.4 introduces a complete Forever-themed interface with a restrained gold-and-violet palette, custom buttons, cards, input fields, status banners and slot hover effects. Version 1.4.1 improves slot highlighting, optical alignment and reliable navigation back to the recipe selection after completed actions.
 
-Version 1.4.2 updates the build and required JEI version to 19.53.0.425. The JEI interfaces used by the editor have the same method signatures as in 19.52.0.422; an additional JEI runtime method is not used by this mod. In-game validation against the updated modpack is still needed.
+This is the separate `skyblock` branch for Forever Skyblock. Version 1.4.3-skyblock.1 updates the build and required JEI version to 19.64.0.454. The JEI dependency in the generated mod metadata is derived from the same Gradle property used to compile the integration. The regular Forever build remains on `main`.
+
+This branch produces development builds. In-game validation of JEI hover, editor opening, ghost drag, save/reload, rename and delete is still required before a release.
 
 ## Requirements
 
 - NeoForge 21.1.249 or newer in the 21.1 line
-- JEI 19.53.0.425
+- JEI **19.64.0.454** (exact version)
 
 ## Usage
 

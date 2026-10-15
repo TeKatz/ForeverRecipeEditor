@@ -1,7 +1,7 @@
 name: Build
 on:
   push:
-    branches: [main, source-recovery-jei-19.53]
+    branches: [main, skyblock, source-recovery-jei-19.53]
   pull_request:
   workflow_dispatch:
 jobs:
