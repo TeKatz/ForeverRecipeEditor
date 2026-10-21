@@ -90,7 +90,7 @@ An in-game visual editor for shaped and shapeless crafting recipes, with JEI gho
 [[dependencies.${mod_id}]]
     modId="jei"
     type="required"
-    versionRange="[19.53.0.425]"
+    versionRange="[19.69.0.457]"
     ordering="AFTER"
     side="CLIENT"
 
